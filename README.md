@@ -24,6 +24,8 @@ In the following sections, we will delve into each project in more detail, explo
 
 ## 1. Language Together Website Migration
 
+[languagetogether.com](https://languagetogether.com)
+
 ### 1.1 Project Overview
 
 The Language Together Website Migration was the first project we embarked on with Language Together. The primary goal was to provide continued support for their existing website and overcome their inability to update the website due to server and development limitations.
@@ -156,42 +158,112 @@ Each asset location is configured to ensure easy management and optimal performa
 
 ## 2. Language Together Flashcard App
 
+[sunny.languagetogether.com](https://sunny.languagetogether.com/)
+
 ### 2.1 Project Overview
 
-### 2.2 Goals and Objectives
+The Language Together Flashcard App was a project that emerged from Language Together's new flashcard product initiative. We developed a companion web app that allows customers to easily navigate the flashcards online and listen to the card audio files. This project was a significant step forward in Language Together's digital offerings, providing an interactive and engaging language learning tool for users.
+
+### 2.2 Project Goals
+
+The primary goal of the Flashcard App project was to create a digital companion to Language Together's physical flashcard product. The app was designed to enhance the user experience by providing easy navigation of flashcards and access to audio files. This digital extension of the product aimed to make language learning more accessible and engaging for users.
 
 ### 2.3 Technologies Used
 
-### 2.4 Infrastructure and Architecture (with Diagram)
+The Flashcard App was developed using React, a popular JavaScript library for building user interfaces. We used create-react-app as a starting point, which provides a modern build setup with no configuration. The app was deployed to CloudFlare Pages, a fast, secure, and performant way to deploy and host JAMstack websites.
 
-### 2.5 Role and Responsibilities
+The content for the app comes from an API endpoint we added to the Craft CMS website. This allowed us to leverage the existing content management system and avoid the need for a separate backend for the app, as well as a familiar interface for the client to manage the app's content.
 
-### 2.6 Project Roadmap
+For error reporting, we used Sentry.io. This tool helps us monitor and fix crashes in real time, improving the app's reliability and user experience.
 
-### 2.7 Challenges and Solutions (with Context)
+### 2.4 Dative's Role
 
-### 2.8 Ongoing Maintenance and Updates
+As with the Website Migration project, Dative was responsible for the full spectrum of development for the Flashcard App. This included DevOps, backend, and frontend development. We also managed the project and communicated with the client. Additionally, we designed the user interface for the app, ensuring it was user-friendly and visually appealing.
+
+### 2.5 Challenges and Solutions
+
+The Flashcard App project presented a unique set of challenges. Initially, the project started as a proof of concept but evolved into a full-fledged product. This meant that we had to leverage the existing Craft CMS website to host the content for the app, instead of creating a separate backend. We overcame this challenge by creating a custom API endpoint to serve the content to the app. While this solution is serviceable for the current version of the app, it may require reevaluation as the app grows.
+
+The app was also originally meant to be mobile-only, but the client later decided to make it responsive. This change required us to redesign the UI to work on different screen sizes and it added additional cross-browser compatibility requirements. Despite this challenge, we were able to deliver a responsive app that provides a consistent user experience across different devices.
+
+### Ongoing Maintenance and Updates
+
+We are currently performing ongoing maintenance and updates on the Flashcard App. This includes regular updates to the React codebase, monitoring and resolving any issues reported by Sentry.io, and implementing new features as requested by the client.
+
+Here's a diagram that illustrates the infrastructure and architecture of the Language Together Flashcard App project:
+
+![Language Together Flashcard App Infrastructure and Architecture](./images/flashcard-app-infrastructure-and-architecture.svg)
 
 ## 3. langt.co (URL Shortener)
 
 ### 3.1 Project Overview
 
-### 3.2 Goals and Objectives
+The langt.co URL Shortener was a small project we undertook to help Language Together create short URLs for their marketing efforts. This tool allows Language Together to create concise and memorable URLs that redirect to specific pages on their website, improving the user experience and enhancing their marketing campaigns.
+
+### 3.2 Project Goals
+
+The primary goal of the langt.co URL Shortener project was to provide Language Together with a simple and effective tool for creating short URLs. These URLs are used in various marketing materials, making it easier for users to visit specific pages on the Language Together website.
 
 ### 3.3 Technologies Used
 
-### 3.4 Infrastructure and Architecture (with Diagram)
+The server hosting the langt.co URL Shortener is provisioned and managed using Laravel Forge. The redirects are managed using the Laravel Forge Redirects feature, which is a wrapper around the Nginx Redirects feature. We update the redirects by running a local Python script that uses the Forge API.
 
-### 3.5 Role and Responsibilities
+### 3.4 Dative's Role
 
-### 3.6 Project Roadmap
+Dative was responsible for setting up and managing the langt.co URL Shortener. This included server provisioning, setting up the redirects, and creating the Python script for updating the redirects.
 
-### 3.7 Challenges and Solutions (with Context)
+### 3.5 Challenges and Solutions
 
-### 3.8 Ongoing Maintenance and Updates
+The langt.co URL Shortener project was relatively straightforward. The only challenge we faced was the time it took for the client to decide on the domain name. Once the domain name was decided, we were able to quickly set up the URL shortener.
 
-## Conclusion
+### 3.6 Ongoing Maintenance and Updates
 
-### Summary of Achievements
+We are not currently performing any ongoing maintenance or updates on the langt.co URL Shortener project. However, we are always ready to assist Language Together if they need any changes or updates to the URL shortener.
 
-### Future Prospects
+Here's a diagram that illustrates the infrastructure and architecture of the langt.co URL Shortener project:
+
+![langt.co URL Shortener Infrastructure and Architecture](./images/langt-co-url-shortener-infrastructure-and-architecture.svg)
+
+## 4. Relationship Between the Projects
+
+The three projects - Language Together Website Migration, Language Together Flashcard App, and langt.co URL Shortener - are tightly coupled and support each other in various ways.
+
+### 4.1 Website Migration and Flashcard App
+
+The Website Migration project laid the groundwork for the Flashcard App. The migration to a more robust server and the updates to the Craft CMS website allowed us to leverage the existing content management system for the Flashcard App. We added a custom API endpoint to the Craft CMS website to serve content to the app, delaying the need for a separate backend for the app. This integration allowed us to create a familiar experience for Language Together's team, who can now update the content for the app with ease.
+
+### 4.2 Website Migration and URL Shortener
+
+The Website Migration project also facilitated the creation of the langt.co URL Shortener. With the website hosted on a server managed by Laravel Forge, we were able to use the Laravel Forge Redirects feature to manage the redirects for the URL shortener. This allowed us to create a tool that enhances Language Together's marketing efforts by providing short and memorable URLs.
+
+### 4.3 Flashcard App and URL Shortener
+
+The Flashcard App and the URL Shortener also support each other. The URL Shortener can be used to create short URLs that redirect to specific flashcards in the app, making it easier for users to access specific content. This integration enhances the user experience and supports Language Together's marketing efforts.
+
+In conclusion, these three projects, while distinct, are interconnected and mutually supportive, creating a comprehensive digital ecosystem for Language Together.
+
+## 5. Project Roadmap
+
+As Dative's collaboration with Language Together transitions, the focus remains on ensuring a smooth handover and continued success of the projects. Here's an overview of the roadmap:
+
+### 5.1 Language Together Website
+
+The ongoing maintenance and updates for the Language Together website will continue. This includes regular updates to the Craft CMS, plugins, and server, as well as implementing minor features as requested by the client. We are also assisting the client in exploring the possibility of converting the website into a Shopify store and migrating the Flashcard App content to a separate backend.
+
+### 5.2 Language Together Flashcard App
+
+We are currently performing ongoing maintenance and updates on the Flashcard App. This includes regular updates to the React codebase, monitoring and resolving any issues reported by Sentry.io, and implementing minor new features as requested by the client. We are also preparing to clone the existing app for a new Flashcard Language Set.
+
+### 5.3 langt.co URL Shortener
+
+While there are no current plans for updates or maintenance on the langt.co URL Shortener, we are always ready to assist Language Together if they need any changes or updates to the URL shortener. Ideally, we would like to migrate the URL shortener to a separate server and add a user interface so the client can manage the redirects themselves.
+
+As Dative phases out its relationship with Language Together, the goal is to ensure a smooth transition that supports Language Together's growth. As Language Together expands its offerings, they will benefit from an agency with more availability and resources to better service their needs.
+
+## 6. Conclusion
+
+Our collaboration with Language Together has been a rewarding journey. We've worked on three interconnected projects - the Language Together Website Migration, the Language Together Flashcard App, and the langt.co URL Shortener - each with its own unique challenges and solutions.
+
+Throughout these projects, we've focused on delivering high-quality solutions that meet Language Together's needs. We've leveraged a range of technologies, from Craft CMS and PHP for the website migration, to React for the Flashcard App, and Laravel Forge for the URL shortener.
+
+As we transition our relationship with Language Together, we are committed to ensuring a smooth handover. We are proud of the work we've done together and are confident that the projects we've worked on will continue to support Language Together's mission of making language learning fun and accessible.
