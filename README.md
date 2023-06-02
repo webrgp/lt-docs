@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Dative, Inc. has been privileged to work with Language Together on a series of interconnected projects aimed at enhancing their digital presence and providing innovative language learning solutions. This documentation provides a comprehensive overview of these projects, detailing the objectives, technologies used, challenges encountered, and solutions implemented.
+Dative, Inc. has had the privilege of collaborating with Language Together on a series of interconnected projects aimed at enhancing their digital presence and providing innovative language learning solutions. This documentation provides a comprehensive overview of these projects, detailing the objectives, technologies used, challenges encountered, and solutions implemented.
 
 ### Overview of Dative's Collaboration with Language Together
 
@@ -53,7 +53,7 @@ The server hosting Language Together's website was provisioned and managed using
 
 ### 1.4 Infrastructure and Architecture (with Diagram)
 
-The infrastructure and architecture of the project involved a LEMP stack on a Digital Ocean Droplet. The server was provisioned and managed using Laravel Forge. The website was built using Craft CMS, which was hosted on the server.
+The website is hosted on a Digital Ocean Droplet, which is managed using Laravel Forge. The server is running a LEMP stack on Ubuntu 20.04 (LTS) x64 as the operating system. The website uses Craft CMS 2.9.2, PHP 7.4.11, MySQL 5.7.32, and Nginx 1.18.0.
 
 ### 1.5 Role and Responsibilities
 
@@ -66,13 +66,11 @@ As the primary developer for this project, Dative was responsible for:
 
 ### 1.6 Project Roadmap
 
-The project was divided into several stages:
+The project was completed in three main stages:
 
-- Initial Consultation: Understanding the client's needs and planning the migration.
-- Setting Up the Server: Provisioning and managing the server using Laravel Forge.
-- Migrating the Website: Transferring the website to the new server and overcoming server and development limitations.
-- Testing / QA: Ensuring the website functions correctly on the new server.
-- Finalizing Migration: Making the necessary DNS changes to point the domain to the new server.
+1. **Server Setup and Website Migration:** This involved setting up the new server on Digital Ocean using Laravel Forge and migrating the website from the old server to the new one.
+2. **DNS Update:** After the migration was completed and tested, the DNS records were updated to point to the new server.
+3. **Website Updates:** Minor updates were performed on the website after the migration.
 
 ### 1.7 Challenges and Solutions (with Context)
 
@@ -86,7 +84,7 @@ Due to the lack on database migrations in Craft CMS 2, we've opt to update the u
 
 ### 1.8 Ongoing Maintenance and Updates
 
-We are currently performing ongoing maintenance and updates on the website and the server. This includes regular updates to the Craft CMS and server software, as well as monitoring the server's performance and resolving any issues that arise.
+Dative continues to provide ongoing maintenance and updates for the Language Together website. This includes regular server updates, Craft CMS updates, and minor website modifications as requested by Language Together.
 
 Here's a diagram that illustrates the infrastructure and architecture of the Language Together Website Migration project:
 
@@ -266,4 +264,12 @@ Our collaboration with Language Together has been a rewarding journey. We've wor
 
 Throughout these projects, we've focused on delivering high-quality solutions that meet Language Together's needs. We've leveraged a range of technologies, from Craft CMS and PHP for the website migration, to React for the Flashcard App, and Laravel Forge for the URL shortener.
 
-As we transition our relationship with Language Together, we are committed to ensuring a smooth handover. We are proud of the work we've done together and are confident that the projects we've worked on will continue to support Language Together's mission of making language learning fun and accessible.
+---
+
+This is a comprehensive documentation that covers all the projects Dative has worked on with Language Together. It provides a detailed overview of each project, the technologies used, the challenges encountered, and the solutions implemented. It also outlines the ongoing maintenance and updates for each project, ensuring that Language Together's digital presence continues to evolve and improve.
+
+As Dative is phasing out its relationship with Language Together, this documentation will serve as a valuable resource for any future agency that will take over the projects. It provides a solid foundation for understanding the work that has been done and the vision for the future.
+
+We hope that this documentation will facilitate a smooth transition and continue to support the growth and success of Language Together.
+
+Dative is ready and willing to provide access to any relevant Git repositories, servers, or services associated with the projects detailed in this documentation, if authorized by Language Together. Additionally, we are prepared to transfer ownership of any resources as required. This will ensure a smooth transition and continuity of services.
